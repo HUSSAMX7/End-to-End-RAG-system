@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from llama_model import LLAMA_MODEL
+from llama_model import LLamaModel
 from utils import get_default_message
 
 st.markdown(
@@ -69,7 +69,7 @@ st.sidebar.markdown(
 def initialize_model():
     try:
         with st.spinner('Loading model...'):
-            st.session_state['model'] = LLAMA_MODEL()
+            st.session_state['model'] = LLamaModel()
             print('Model loaded successfully...')
         st.session_state['model_initialized'] = True
     except Exception as e:
