@@ -49,6 +49,14 @@ def custom_arabic_text_spliter_by_heading1(self, docx_path: str):
     return sections
 
 
+def clean_arabic_text(text: str) -> str:
+    text = re.sub(r"[ـًٌٍَُِّْ]", "", text)  
+    text = re.sub(r"\s+", " ", text)        
+
+    return text.strip()
+
+
+
 def get_arabic_vector_store(self):
 
     embeddings = OllamaEmbeddings(model="UBC-NLP/ARBERT")
