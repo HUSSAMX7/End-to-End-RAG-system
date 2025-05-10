@@ -12,7 +12,7 @@ docker build -t complete-rag-udemy .
 ✅ الخطوة 3: إضافة tag للصورة (تهيئتها للرفع إلى ECR)
 
 
-docker tag complete-rag-udemy:latest "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-complete-rag-udemy/home:latest"
+docker tag complete-rag:latest "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-complete-rag/home:latest"
 
 
 ✅ الخطوة 4: تسجيل الدخول لـ ECR
@@ -24,6 +24,6 @@ aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --
 ✅ الخطوة 5: رفع الصورة إلى ECR
 
 
-docker push "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-complete-rag-udemy/home:latest"
+docker push "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ecs-complete-rag/home:latest"
 
 
