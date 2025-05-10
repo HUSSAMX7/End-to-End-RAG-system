@@ -54,7 +54,7 @@ docker run -p 7877:7877 capstone-rag-model
 
 ##  Deploy to AWS EC2 + ECR
 
- Use the file: `step to move docker to ec2.txt`  
+ Use the file: `steps to move docker to ec2.txt`  
 It contains full instructions to:
 
 - Create ECR repo  
